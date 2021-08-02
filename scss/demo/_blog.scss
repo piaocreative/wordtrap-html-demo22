@@ -1,0 +1,61 @@
+
+/* ----------------------------------------------------------------
+
+	blog.scss
+
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Blog
+-----------------------------------------------------------------*/
+
+.post {
+	position: relative;
+}
+
+.post-thumbnail {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+
+	a {
+		display: block;
+	}
+
+}
+
+.post-content {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	.entry-title {
+		color: $white;
+	}
+
+	.entry-content {
+		font-size: 1.15rem;
+		color: #f7f7f7 !important;
+	}
+
+	.entry-categories {
+
+		a {
+			text-decoration: none;
+			font-size: 1.1875rem;
+		}
+
+	}
+	
+}
+
+.piece {
+	@include media-breakpoint-down(lg) {
+		display: none;
+	}
+}
+

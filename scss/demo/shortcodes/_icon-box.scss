@@ -1,0 +1,48 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: icon-box.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Icon Box Styles
+-----------------------------------------------------------------*/
+
+
+.icon-box {
+    display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+
+	.icon-wrapper {
+		min-width: 2.5rem;
+		line-height: 1;
+
+		i {
+			color: $theme-color;
+			font-size: 1rem;
+		}
+	}
+
+	.icon-header {
+		display: flex;
+		align-items: center;
+		line-height: 1;
+
+		h4 {
+			font-family: $body-font;
+			font-size: 0.85rem;
+			font-weight: 300;
+			margin-bottom: 0;
+			min-width: 7.625rem;
+			color: #6b6b6b;	
+		}
+
+		span {
+			color: black;
+			font-size: 0.8rem;
+			font-weight: 300;
+		}
+	}
+}

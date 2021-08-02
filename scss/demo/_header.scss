@@ -1,0 +1,264 @@
+
+/* ----------------------------------------------------------------
+
+	header.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Header
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for header. Thanks!
+-----------------------------------------------------------------*/
+
+
+
+#header {
+	position: relative;	
+
+	// Transparent header
+	&.transparent-header {
+		background-color: #857db8;
+		z-index: 199;
+
+		@include media-breakpoint-up(lg) {
+			background-color: transparent;
+
+			& + #content,
+			& + #contact-info,
+			& + #error-404 {
+				position: relative;
+				top: -$header-height;
+				margin-bottom: -$header-height;
+			}
+		}			
+	}
+}
+
+#header-wrap {
+	padding-left: 4.375rem;
+	padding-right: 4.375rem;
+
+	@include media-breakpoint-down(sm) {
+		padding-left: 2.375rem;
+		padding-right: 2.375rem;
+	}
+}
+
+.nav {
+	flex-wrap: nowrap;
+}
+
+.navbar-toggler {
+	border-radius: 0;
+}
+
+.navbar-collapse {
+	padding: 1rem 0;
+
+	@include media-breakpoint-up(lg) {
+		padding: 0;
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Sticky Header
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Logo
+-----------------------------------------------------------------*/
+
+.navbar-brand {
+	margin-right: 2.25rem;
+
+	img {
+		width: 60%;
+		height: auto;
+	}
+}
+
+
+
+
+/* ----------------------------------------------------------------
+	Mega Menu
+-----------------------------------------------------------------*/
+
+// Please ignore mega menu now 
+
+
+/* ----------------------------------------------------------------
+	Top Buttons
+-----------------------------------------------------------------*/
+
+
+#top-btns {
+	padding-top: 1rem;
+	margin-right: 30rem;
+
+	@include media-breakpoint-up(lg) {
+		padding-top: 0;
+	}
+	
+	.nav-item:not(:first-child) {
+		margin-left: 1.25rem;
+	}
+
+	.nav-link {
+		color: $top-btn-font-color;	
+		font-size: $top-btn-font-size;	
+		line-height: 1;
+		padding: 0;
+
+		&:hover {
+			color: $link-hover-color;
+		}
+
+		[data-cart-items] {
+			position: relative;
+			display: inline-block;
+		}
+		
+		[data-cart-items]::before {
+			content: attr(data-cart-items);
+			position: absolute;
+			top: -.5rem;
+			right: -.75rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 19px;
+			height: 19px;
+			font-size: 11px;
+			font-weight: 500;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			background-color: #ff6f61;
+			color: #fff;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Top Links
+-----------------------------------------------------------------*/
+
+#top-links {
+	.nav-item {			
+		@include media-breakpoint-up(lg) {
+			padding-right: 1.875rem;		
+		}
+	}
+
+	a.nav-link {
+		color: $top-btn-font-color;
+		display: block;
+		font-size: 0.75rem;	
+		
+		@include media-breakpoint-up(lg) {
+			padding: 0;		
+		}
+
+		&:hover {
+			color: $topbar-hover-color;
+		}
+	}
+
+	.dropdown-toggle {
+		&::after {
+			margin-left: .75em;
+		}
+	}
+
+	.dropdown-menu {
+		background: $white;
+		border: 0;
+		top: 1.5rem;
+		left: 0;
+		width: 100%;		
+		margin: 0;
+		border-top: 3px solid $link-hover-color;
+		@include border-radius(0);
+		@include box-shadow(0 0 5px -1px rgba($black, 0.2));
+
+		@include media-breakpoint-up(lg) {
+			width: 8.75rem;
+		}
+
+		a.dropdown-item {
+			color: $heading-color;
+			height: 2.25rem;
+			line-height: 2.25rem;
+			font-size: 0.75rem;				
+			padding: 0 0.75rem;
+
+			&:hover {
+				color: $theme-color;
+			}
+		}
+
+		img {
+			display: inline-block;
+			position: relative;
+			top: -1px;
+			width: 1rem;
+			height: 1rem;
+			margin-right: 0.25rem;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Top Infos
+-----------------------------------------------------------------*/
+
+#top-infos {
+	display: flex;
+
+	.phone-number {
+		margin-right: 2.875rem;
+		
+		a {
+			color: $topbar-color;
+			margin-left: 1.75rem;
+
+			&:hover {
+				color: $topbar-hover-color;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Top Login
+-----------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------
+	Top Search
+-----------------------------------------------------------------*/
+
+
+
+
+/* ----------------------------------------------------------------
+	Top Cart
+-----------------------------------------------------------------*/
+
+
+
+
+/* ----------------------------------------------------------------
+	Top Account
+-----------------------------------------------------------------*/

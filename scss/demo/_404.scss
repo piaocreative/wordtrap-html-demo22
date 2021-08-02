@@ -1,0 +1,78 @@
+/* ----------------------------------------------------------------
+
+	404.scss
+
+-----------------------------------------------------------------*/
+
+
+.error-logo {
+
+    h2 {
+        font-size: 12.6875rem !important;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 6.875rem !important;
+        }
+    }
+
+    p {
+        font-size: 1.125rem !important;
+    }
+    
+}
+
+#error-sidebar {
+
+    padding-top: 12rem;
+
+    @include media-breakpoint-down(lg) {
+        padding: 2rem !important;
+    }
+
+    h5 {
+        font-size: 0.875rem;
+        margin-bottom: 2rem;
+        letter-spacing: 0.05rem;
+        color: #535353;
+
+        @include media-breakpoint-down(lg) {
+            text-align: center;
+        }
+    }
+
+    ul {
+
+        padding: 0;
+        list-style: none;
+
+        li {
+
+            width: 58%;
+
+            @include media-breakpoint-down(lg) {
+                margin: auto;
+            }
+
+            a {                
+                color: #302f2d;
+                display: inline-block;
+                font-family: $body-font;
+                font-weight: 500;
+                line-height: 1;
+                padding: 1rem 1.5rem;
+                text-decoration: none;
+                width: 100%;
+                border-radius: 4rem;
+                font-size: 1rem;
+                
+                &.bg {
+                    background-color: #f9f9f9;
+                }
+
+            }
+            a:hover {
+                color: $theme-color;
+            }
+        }
+    }
+}
