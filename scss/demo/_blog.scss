@@ -11,6 +11,10 @@
 
 .post {
 	position: relative;
+
+	@include media-breakpoint-down(lg) {
+		text-align: center;
+	}
 }
 
 .post-thumbnail {

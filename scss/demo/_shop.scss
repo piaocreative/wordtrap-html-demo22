@@ -292,18 +292,25 @@
 			align-items: center !important;
 
 			h2 {
-				line-height: 2.5rem;
+				line-height: 3.5rem;
 			}
 		}
 
 		&.ads1 {
-			height: 12rem;
+			height: 20rem;
 
 			img {
 				height: 100%;
 			}
 		}
 	}
+
+	@include media-breakpoint-down(md) {
+		&.ads1 {
+			height: 12rem !important;
+		}
+
+	} 
 
 }
 

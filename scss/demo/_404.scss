@@ -7,6 +7,10 @@
 
 .error-logo {
 
+    @include media-breakpoint-down(lg) {
+        text-align: center;
+    }
+
     h2 {
         font-size: 12.6875rem !important;
 
