@@ -169,7 +169,7 @@
 		background-color: #302f2d;
 		display: inline-block;
 		color: $white;
-		padding: 0.5rem;
+		padding: 1rem;
 		z-index: 1;
 		@include transition(all 0.3s ease-in-out);		
 
@@ -219,12 +219,16 @@
 	line-height: 1;
 	font-weight: 500;
 	letter-spacing: .5px;
-	padding: .65rem 3rem;
+	padding: .65rem 7rem;
 	position: absolute;
 	left: 0;
 	top: 0;
 	z-index: 2;
 	border-radius: 1.875rem;
+
+	@include media-breakpoint-down(sm) {
+		padding: 0.65rem 4rem;
+	}
 }
 
 .onhot {
