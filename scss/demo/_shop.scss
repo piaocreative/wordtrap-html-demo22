@@ -85,6 +85,10 @@
 	.product-details {
 		padding: 1.875rem;
 		z-index: 1;
+
+		@include media-breakpoint-down(lg) {
+			padding: 1rem;
+		}
 	}
 
 	.product-price {
@@ -219,7 +223,7 @@
 	line-height: 1;
 	font-weight: 500;
 	letter-spacing: .5px;
-	padding: .65rem 7rem;
+	padding: .65rem 2rem;
 	position: absolute;
 	left: 0;
 	top: 0;

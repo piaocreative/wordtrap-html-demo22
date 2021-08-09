@@ -20,19 +20,16 @@ $heading-color:                 #302f2d;
 //-------------------- Redefine Bootstrap Variables ------------//
 
 // Theme Colors
-$primary:                     $theme-color;
-$secondary:                   #302f2d;
-$dark:                        rgb(0, 0, 0);
-$success:                     #f9f9f9;
+$primary:                         $theme-color;
+$secondary:                     #302f2d;
+$dark:                          rgb(0, 0, 0);
+$success:                       #f9f9f9;
 
 
 //-------------------- Font Families --------------------//
-@font-face {
-  font-family: myFont;
-  src:url("./font/AbrilFatface-Regular.otf");
-};
+
 $body-font:                     'Open Sans', sans-serif;
-$heading-font:                  'myFont', serif;
+$heading-font:                  'Abril Fatface', cursive;
 
 
 // Font sizes
@@ -43,11 +40,7 @@ $h3-font-size:                	2.25rem;
 $h4-font-size:                	1.75rem;
 $h5-font-size:                	1.125rem;
 $h6-font-size:               	  0.75rem;
-$body-size:						          3vh;
-$side-bar-text:					        0.9rem;
 
-$button-radius:					        4rem;
-$footer-size:					          0.9rem;
 
 // space//
 $spacer: 1.5rem !default;
@@ -64,9 +57,6 @@ $spacers:(
   8: $spacer * 5,
 ) !default;
 
-$container-max-widths: (
-  xl: 90%
-);
 
 $grid-gutter-width:             2rem;
 

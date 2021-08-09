@@ -88,7 +88,8 @@
 					font-weight: 600;
 					text-transform: uppercase;
 					text-decoration: none;
-					font-size: 0.7825rem;
+					font-size: 0.875rem;
+					font-family: 'Segoe UI', sans-serif;
 
 					&:hover {
 						color: $theme-color;
@@ -169,7 +170,7 @@
 				display: block;
 				text-decoration: none;
 				font-size: 0.875rem;
-				font-weight: 700;
+				font-weight: 500;
 
 				&.h4 {
 					font-size: 1.875rem;
