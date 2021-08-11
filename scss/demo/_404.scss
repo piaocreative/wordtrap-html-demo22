@@ -73,10 +73,11 @@
                     background-color: #f9f9f9;
                 }
 
+                &:hover {
+                    color: $theme-color;
+                }
             }
-            a:hover {
-                color: $theme-color;
-            }
+            
         }
     }
 }

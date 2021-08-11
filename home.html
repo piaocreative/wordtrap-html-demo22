@@ -51,93 +51,89 @@
 
                     <div class="row">
 
-                        <div class="">
+                        <nav class="navbar navbar-expand-lg navbar-dark">
 
-                            <nav class="navbar navbar-expand-lg navbar-dark">
-
-                                <div class="container-fluid p-0">
-            
-                                    <!-- Logo
+                            <div class="container-fluid p-0">
+        
+                                <!-- Logo
+                                ============================================= -->
+                                <a href="index.html" class="navbar-brand" data-dark-logo="images/logo.png">
+                                    <img src="images/saler-txt.png" alt="Saler Logo">
+                                </a>
+                                
+                                <!-- Navbar Toggler
+                                ============================================= -->
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                
+                                <!-- Navbar Collapse
+                                ============================================= -->
+                                <div id="navbarCollapse" class="collapse navbar-collapse justify-content-between">
+        
+                                    <!-- Top Links
                                     ============================================= -->
-                                    <a href="index.html" class="navbar-brand" data-dark-logo="images/logo.png">
-                                        <img src="images/saler-txt.png" alt="Saler Logo">
-                                    </a>
-                                    
-                                    <!-- Navbar Toggler
+                                    <div id="top-links">
+        
+                                        <ul class="nav navbar-nav">
+        
+                                            <li class="nav-item dropdown">
+                                                <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">USD</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#" class="dropdown-item">EUR</a></li>
+                                                    <li><a href="#" class="dropdown-item">AUD</a></li>
+                                                    <li><a href="#" class="dropdown-item">GBP</a></li>
+                                                </ul>
+                                            </li>
+        
+                                            <li class="nav-item dropdown">
+                                                <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">ENG</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#" class="dropdown-item"><img src="images/icons/flags/french.png" alt="French"> FR</a></li>
+                                                    <li><a href="#" class="dropdown-item"><img src="images/icons/flags/italian.png" alt="Italian"> IT</a></li>
+                                                    <li><a href="#" class="dropdown-item"><img src="images/icons/flags/german.png" alt="German"> DE</a></li>
+                                                </ul>
+                                            </li>
+        
+                                        </ul>
+        
+                                    </div><!-- .top-links -->
+        
+                                    <!-- Top Buttons
                                     ============================================= -->
-                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-                                    
-                                    <!-- Navbar Collapse
-                                    ============================================= -->
-                                    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-between">
-            
-                                        <!-- Top Links
-                                        ============================================= -->
-                                        <div id="top-links">
-            
-                                            <ul class="nav navbar-nav">
-            
-                                                <li class="nav-item dropdown">
-                                                    <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">USD</a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="#" class="dropdown-item">EUR</a></li>
-                                                        <li><a href="#" class="dropdown-item">AUD</a></li>
-                                                        <li><a href="#" class="dropdown-item">GBP</a></li>
-                                                    </ul>
-                                                </li>
-            
-                                                <li class="nav-item dropdown">
-                                                    <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">ENG</a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="#" class="dropdown-item"><img src="images/icons/flags/french.png" alt="French"> FR</a></li>
-                                                        <li><a href="#" class="dropdown-item"><img src="images/icons/flags/italian.png" alt="Italian"> IT</a></li>
-                                                        <li><a href="#" class="dropdown-item"><img src="images/icons/flags/german.png" alt="German"> DE</a></li>
-                                                    </ul>
-                                                </li>
-            
-                                            </ul>
-            
-                                        </div><!-- .top-links -->
-            
-                                        <!-- Top Buttons
-                                        ============================================= -->
-                                        <div id="top-btns">
-                                            
-                                            <ul class="navbar-nav flex-row">
-            
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link p-0 text-dark"><i class="far fa-heart"></i></a>
-                                                </li>
-            
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link p-0 text-dark"><i class="far fa-user"></i></a>
-                                                </li>
-            
-                                                <li class="nav-item">
-                                                    <a class="nav-link p-0 text-dark" data-toggle="modal" href="#modalShoppingCart">
-                                                        <span data-cart-items="2">
-                                                          <i class="fas fa-shopping-cart"></i>
-                                                        </span>
-                                                      </a>
-                                                </li>
-            
-                                            </ul>
-            
-                                        </div><!-- #top-btns -->
+                                    <div id="top-btns">
+                                        
+                                        <ul class="navbar-nav flex-row">
+        
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link p-0 text-dark"><i class="far fa-heart"></i></a>
+                                            </li>
+        
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link p-0 text-dark"><i class="far fa-user"></i></a>
+                                            </li>
+        
+                                            <li class="nav-item">
+                                                <a class="nav-link p-0 text-dark" data-toggle="modal" href="#modalShoppingCart">
+                                                    <span data-cart-items="2">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </span>
+                                                    </a>
+                                            </li>
+        
+                                        </ul>
+        
+                                    </div><!-- #top-btns -->
 
-                                        <div class="pt-2">
-                                            <a href="#" class="nav-link p-0 text-dark"><i class="fas fa-bars"></i></a>
-                                        </div>
-            
-                                    </div><!-- #header-right-col -->
-            
-                                </div>
-            
-                            </nav>
-
-                        </div>
+                                    <div class="pt-2">
+                                        <a href="#" class="nav-link p-0 text-dark"><i class="fas fa-bars"></i></a>
+                                    </div>
+        
+                                </div><!-- #header-right-col -->
+        
+                            </div>
+        
+                        </nav>
 
                     </div>
 
@@ -163,12 +159,9 @@
 
                             <div id="page-title" class="offset-lg-2">
                                 
-                                <div class="sub-title">
-                                    <h3 class="heading-font fw-bold text-primary mb-0">women's hats</h3>
-                                </div>
-                                <div class="title">
-                                    <h2 class="text-secondary heading-font fw-semi-bold h1">Seasonal Sale <span class="text-primary">50%</span></h2>
-                                </div>
+                                <h3 class="sub-title heading-font fw-bold text-primary mb-0">women's hats</h3>
+                                <h2 class="title text-secondary heading-font fw-semi-bold h1">Seasonal Sale <span class="text-primary">50%</span></h2>
+
                                 <p class="text-secondary my-4">from June 1 to July 1</p>
                                 <div class="shop-now-link">
                                     <span class="text-primary heading-font fw-bold">Shop Now</span>
@@ -178,8 +171,6 @@
                             </div>
 
                             <div class="row g-0 position-relative">
-
-                                
 
                                 <div class="col-lg-4">
 
@@ -193,10 +184,8 @@
 
                                 </div>
 
-                                <!-- <div class="banner-sub-title"> -->
-                                    <span class="banner-sub-title back">0</span>
-                                    <span class="banner-sub-title obverse">1</span>
-                                <!-- </div> -->
+                                <span class="banner-sub-title back">0</span>
+                                <span class="banner-sub-title obverse">1</span>
 
                                 <div class="col-lg-1 banner-arrows text-center">
                                     <a href="#" class="bg-primary d-flex justify-content-center align-items-center h-50 text-white"><i class="fas fa-chevron-right"></i></a>
@@ -231,14 +220,12 @@
 
                                     <div class="col-lg-6 d-flex align-items-end">
  
-                                        <div class="product">           
-    
+                                        <div class="product">         
                                             <div class="product-image">
                                                 <a href="#"><img src="images/shop/product1_1.png" alt="Product Image" class="img-fluid"></a>
                                                 <a href="#"><img src="images/shop/product1_2.png" alt="Product Image" class="img-fluid"></a>
                                                 <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                             </div>
-                
                                             <div class="product-details d-flex justify-content-between">
                                                 <div>
                                                     <div class="product-rating mb-1">
@@ -258,8 +245,7 @@
                                                         <a class="btn btn-default add-to-cart d-block"><i class="fas fa-shopping-cart"></i></a>  
                                                     </div>
                                                 </div>
-                                            </div>                     
-                
+                                            </div>               
                                         </div>
 
                                     </div>
@@ -267,15 +253,12 @@
                                     <div class="col-lg-6 d-flex align-items-end">
  
                                         <div class="product">           
-    
                                             <div class="product-image">
                                                 <a href="#"><img src="images/shop/product1_2.png" alt="Product Image" class="img-fluid"></a>
                                                 <a href="#"><img src="images/shop/product1_1.png" alt="Product Image" class="img-fluid"></a>
                                                 <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                             </div>
-                
                                             <div class="product-details d-flex justify-content-between">
-
                                                 <div>
                                                     <div class="product-rating mb-1">
                                                         <i class="fas fa-star"></i>
@@ -286,7 +269,6 @@
                                                     </div>  
                                                     <h3 class="product-title m-0"><a href="#">Summer hat 2021</a></h3>
                                                 </div>
-
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     <div class="product-price heading-font heading-font">
                                                         <del class="body-font m-2 mb-0">$243</del>
@@ -296,11 +278,8 @@
                                                         <a class="btn btn-default bg-primary add-to-cart d-block"><i class="fas fa-shopping-cart"></i></a>  
                                                     </div>
                                                 </div>
-
                                             </div>
-
-                                            <div class="onsale">Sale 50%</div>                    
-                
+                                            <div class="onsale">Sale 50%</div>               
                                         </div>
 
                                     </div>
@@ -309,16 +288,14 @@
 
                                 <div class="col-lg-4 row g-0">
 
-                                    <div class="col-lg-12 col-md-6">
+                                    <div class="col-md-6 col-lg-12">
 
                                         <div class="product d-flex">           
-    
                                             <div class="product-image w-50">
                                                 <a href="#"><img src="images/shop/product1_3.png" alt="Product Image" class="img-fluid"></a>
                                                 <a href="#"><img src="images/shop/product1_4.png" alt="Product Image" class="img-fluid"></a>
                                                 <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                             </div>
-                
                                             <div class="product-details m-auto">
                                                 <div class="product-rating mb-1">
                                                     <i class="fas fa-star"></i>
@@ -336,22 +313,19 @@
                                                         <a class="btn btn-default add-to-cart d-block"><i class="fas fa-shopping-cart"></i></a>  
                                                     </div>
                                                 </div>
-                                            </div>                       
-                
+                                            </div>         
                                         </div>
 
                                     </div>
 
-                                    <div class="col-lg-12 col-md-6">
+                                    <div class="col-md-6 col-lg-12">
 
                                         <div class="product d-flex">           
-    
                                             <div class="product-image w-50">
                                                 <a href="#"><img src="images/shop/product1_4.png" alt="Product Image" class="img-fluid"></a>
                                                 <a href="#"><img src="images/shop/product1_3.png" alt="Product Image" class="img-fluid"></a>
                                                 <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                             </div>
-                
                                             <div class="product-details m-auto">
                                                 <div class="product-rating mb-1">
                                                     <i class="fas fa-star"></i>
@@ -361,7 +335,6 @@
                                                     <i class="fas fa-star empty"></i>
                                                 </div>  
                                                 <h3 class="product-title m-0"><a href="#">Summer hat 2021<br>woman's</a></h3>
-
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     <div class="product-price heading-font heading-font">
                                                         <span class="heading-font">$149</span>
@@ -370,7 +343,6 @@
                                                         <a class="btn btn-default add-to-cart d-block"><i class="fas fa-shopping-cart"></i></a>  
                                                     </div>
                                                 </div>
-
                                             </div>                       
                 
                                         </div>
@@ -398,11 +370,9 @@
                             <div class="d-lg-flex gap-4">
     
                                 <div class="ads ads1">
-
                                     <div class="ads-bg">
                                         <img src="images/ads/ads1.png" alt="Ads Image" class="img-fluid w-100">
                                     </div>
-
                                     <div class="ads-body d-flex align-items-center">
                                         <div class="p-3">
                                             <p class="h3 mb-3 text-white heading-font">-30%</p>
@@ -412,15 +382,12 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
 
                                 <div class="ads ads1">
-
                                     <div class="ads-bg">
                                         <img src="images/ads/ads2.png" alt="Ads Image" class="img-fluid w-100">
                                     </div>
-
                                     <div class="ads-body d-flex align-items-center">
                                         <div class="p-3">
                                             <h3 class="text-white heading-font mb-3">Black<br>Friday</h3>
@@ -430,17 +397,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
                                 </div>
 
                             </div>
                                 
                             <div class="ads ads1 pt-4">
-
                                 <div class="ads-bg">
                                     <img src="images/ads/ads4.png" alt="Ads Image" class="img-fluid w-100">
                                 </div>
-
                                 <div class="ads-body pt-3 d-flex align-items-center">
                                     <div class="p-5">Fabout
                                         <h2 class="mb-6 heading-font text-secondary"><span class="text-primary">New</span><br>collection</h2>
@@ -450,7 +414,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
 
                         </div>
@@ -458,11 +421,9 @@
                         <div class="col-lg-4">
 
                             <div class="ads">
-
                                 <div class="ads-bg">
                                     <img src="images/ads/ads3.png" alt="Ads Image" class="img-fluid w-100">
                                 </div>
-
                                 <div class="ads-body d-flex align-items-start">
                                     <div class="p-5">
                                         <h3 class="text-dark mb-5 heading-font">Buy cheaper with your friends</h3>
@@ -472,15 +433,12 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
 
                             <div class="ads pt-4">
-
                                 <div class="ads-bg">
                                     <img src="images/ads/ads5.png" alt="Ads Image" class="img-fluid w-100">
                                 </div>
-
                                 <div class="ads-body pt-3 d-flex align-items-center">
                                     <div class="p-3">
                                         <p class="h3 text-dark heading-font">-50%</p>
@@ -490,7 +448,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
 
                         </div>
@@ -514,13 +471,11 @@
                                 </div>
     
                                 <div class="product">           
-    
                                     <div class="product-image">
                                         <a href="#"><img src="images/shop/product2_1.png" alt="Product Image" class="img-fluid"></a>
                                         <a href="#"><img src="images/shop/product2_2.png" alt="Product Image" class="img-fluid"></a>
                                         <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                     </div>
-        
                                     <div class="product-details pos-top-left p-5">
                                         <div class="product-rating mb-4">
                                             <i class="fas fa-star"></i>
@@ -538,23 +493,19 @@
                                                 <a class="btn btn-default add-to-cart d-block"><i class="fas fa-shopping-cart"></i></a>  
                                             </div>
                                         </div>
-
                                     </div>                       
         
                                 </div>
 
                                 <div class="d-md-flex mt-4">
 
-                                    <div class="product d-flex">           
-    
+                                    <div class="product d-flex">       
                                         <div class="product-image">
                                             <a href="#"><img src="images/shop/product2_3.png" alt="Product Image" class="img-fluid"></a>
                                             <a href="#"><img src="images/shop/product2_4.png" alt="Product Image" class="img-fluid"></a>
                                             <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                         </div>
-            
                                         <div class="product-details m-auto">
-
                                             <div class="product-rating mb-1">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -563,7 +514,6 @@
                                                 <i class="fas fa-star empty"></i>
                                             </div>  
                                             <h3 class="product-title m-0"><a href="#">Summer hat 2021<br>woman's</a></h3>
-
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="product-price heading-font heading-font">
                                                     <span class="heading-font">$149</span>
@@ -572,19 +522,16 @@
                                                     <a class="btn btn-default add-to-cart d-block"><i class="fas fa-shopping-cart"></i></a>  
                                                 </div>
                                             </div>
-
                                         </div>                       
             
                                     </div>
     
                                     <div class="product d-flex">           
-    
                                         <div class="product-image">
                                             <a href="#"><img src="images/shop/product2_4.png" alt="Product Image" class="img-fluid"></a>
                                             <a href="#"><img src="images/shop/product2_5.png" alt="Product Image" class="img-fluid"></a>
                                             <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                         </div>
-            
                                         <div class="product-details m-auto">
                                             <div class="product-rating mb-1">
                                                 <i class="fas fa-star"></i>
@@ -594,7 +541,6 @@
                                                 <i class="fas fa-star empty"></i>
                                             </div>  
                                             <h3 class="product-title m-0"><a href="#">Summer hat 2021<br>woman's</a></h3>
-
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="product-price heading-font heading-font">
                                                     <span class="heading-font">$149</span>
@@ -603,7 +549,6 @@
                                                     <a class="btn btn-default add-to-cart d-block"><i class="fas fa-shopping-cart"></i></a>  
                                                 </div>
                                             </div>
-                                            
                                         </div>                  
             
                                     </div>
@@ -618,14 +563,12 @@
                                     <p class="title">New arrivals</p>
                                 </div>
     
-                                <div class="product">           
-    
+                                <div class="product">        
                                     <div class="product-image">
                                         <a href="#"><img src="images/shop/product2_2.png" alt="Product Image" class="img-fluid"></a>
                                         <a href="#"><img src="images/shop/product2_1.png" alt="Product Image" class="img-fluid"></a>
                                         <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                     </div>
-        
                                     <div class="product-details pos-top-left p-5">
                                         <div class="product-rating mb-4">
                                             <i class="fas fa-star"></i>
@@ -650,13 +593,11 @@
                                 <div class="d-md-flex mt-4">
                                     
                                     <div class="product d-flex">           
-    
                                         <div class="product-image">
                                             <a href="#"><img src="images/shop/product2_5.png" alt="Product Image" class="img-fluid"></a>
                                             <a href="#"><img src="images/shop/product2_6.png" alt="Product Image" class="img-fluid"></a>
                                             <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                         </div>
-            
                                         <div class="product-details m-auto">
                                             <div class="product-rating mb-1">
                                                 <i class="fas fa-star"></i>
@@ -679,13 +620,11 @@
                                     </div>
     
                                     <div class="product d-flex">           
-    
                                         <div class="product-image">
                                             <a href="#"><img src="images/shop/product2_6.png" alt="Product Image" class="img-fluid"></a>
                                             <a href="#"><img src="images/shop/product2_3.png" alt="Product Image" class="img-fluid"></a>
                                             <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                         </div>
-            
                                         <div class="product-details m-auto">
                                             <div class="product-rating mb-1">
                                                 <i class="fas fa-star"></i>
@@ -703,8 +642,7 @@
                                                     <a class="btn btn-default add-to-cart d-block"><i class="fas fa-shopping-cart"></i></a>  
                                                 </div>
                                             </div>
-                                        </div>                        
-            
+                                        </div>      
                                     </div>
 
                                 </div>
@@ -728,14 +666,12 @@
                                     <div class="carousel-item active">
                                         <div class="d-md-flex">
 
-                                            <div class="product">           
-                
+                                            <div class="product">          
                                                 <div class="product-image">
                                                     <a href="#"><img src="images/shop/product2_9.png" alt="Product Image" class="img-fluid"></a>
                                                     <a href="#"><img src="images/shop/product2_8.png" alt="Product Image" class="img-fluid"></a>
                                                     <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                                 </div>
-                    
                                                 <div class="product-details d-flex justify-content-between">
                                                     <div>
                                                         <div class="product-rating mb-1">
@@ -747,7 +683,6 @@
                                                         </div>  
                                                         <h3 class="product-title m-0"><a href="#">Summer hat 2021</a></h3>
                                                     </div>
-
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="product-price heading-font heading-font">
                                                             <span class="heading-font">$149</span>
@@ -760,14 +695,12 @@
                     
                                             </div>
 
-                                            <div class="product">           
-                
+                                            <div class="product">          
                                                 <div class="product-image">
                                                     <a href="#"><img src="images/shop/product2_8.png" alt="Product Image" class="img-fluid"></a>
                                                     <a href="#"><img src="images/shop/product2_9.png" alt="Product Image" class="img-fluid"></a>
                                                     <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                                 </div>
-                    
                                                 <div class="product-details d-flex justify-content-between">
                                                     <div>
                                                         <div class="product-rating mb-1">
@@ -779,7 +712,6 @@
                                                         </div>  
                                                         <h3 class="product-title m-0"><a href="#">Summer hat 2021</a></h3>
                                                     </div>
-
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="product-price heading-font heading-font">
                                                             <span class="heading-font">$149</span>
@@ -798,13 +730,11 @@
                                         <div class="d-md-flex">
 
                                             <div class="product">           
-                
                                                 <div class="product-image">
                                                     <a href="#"><img src="images/shop/product2_9.png" alt="Product Image" class="img-fluid"></a>
                                                     <a href="#"><img src="images/shop/product2_8.png" alt="Product Image" class="img-fluid"></a>
                                                     <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                                 </div>
-                    
                                                 <div class="product-details d-flex justify-content-between">
                                                     <div>
                                                         <div class="product-rating mb-1">
@@ -816,7 +746,6 @@
                                                         </div>  
                                                         <h3 class="product-title m-0"><a href="#">Summer hat 2021</a></h3>
                                                     </div>
-
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="product-price heading-font heading-font">
                                                             <span class="heading-font">$149</span>
@@ -830,13 +759,11 @@
                                             </div>
 
                                             <div class="product">           
-                
                                                 <div class="product-image">
                                                     <a href="#"><img src="images/shop/product2_8.png" alt="Product Image" class="img-fluid"></a>
                                                     <a href="#"><img src="images/shop/product2_9.png" alt="Product Image" class="img-fluid"></a>
                                                     <a class="add-to-wishlist bg-success p-0"><i class="far fa-heart"></i></a>
                                                 </div>
-                    
                                                 <div class="product-details d-flex justify-content-between">
                                                     <div>
                                                         <div class="product-rating mb-1">
@@ -848,7 +775,6 @@
                                                         </div>  
                                                         <h3 class="product-title m-0"><a href="#">Summer hat 2021</a></h3>
                                                     </div>
-
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="product-price heading-font heading-font">
                                                             <span class="heading-font">$149</span>
@@ -919,53 +845,41 @@
                         <div class="d-lg-flex posts ms-8 gap-3 m-0">
 
                                 <article class="post">
-
                                     <div class="post-thumbnail">
                                         <img src="./images/posts/post1.png" class="img-fluid" alt="Top Jeans Collection">
                                     </div>
-
                                     <div class="post-content d-flex align-items-center">
-                                        
                                         <div class="p-5">
                                             <div class="entry-categories mb-3">
                                                 <a href="#">#hat</a>
                                             </div>
-                                            <div class="entry-title mb-4">
-                                                <h3 class="heading-font">By cheaper <br>with your friends</h3>
-                                            </div>
+                                            <h3 class="entry-title heading-font">By cheaper <br>with your friends</h3>
                                             <div class="entry-content">
                                                 <p>Summer hat 2021 woman's</p>
                                             </div>
                                         </div>
-                                        
                                     </div>
 
                                 </article>
 
                                 <article class="post">
-
                                     <div class="post-thumbnail">
                                         <img src="./images/posts/post2.png" class="img-fluid" alt="Top Jeans Collection">
                                     </div>
-
                                     <div class="post-content d-flex align-items-center">
                                         <div class="p-5">
                                             <div class="entry-categories mb-3">
                                                 <a href="#">#hat</a>
                                             </div>
-                                            <div class="entry-title mb-4">
-                                                <h3 class="heading-font">By cheaper <br>with your friends</h3>
-                                            </div>
+                                            <h3 class="entry-title mb-4 heading-font">By cheaper <br>with your friends</h3>
                                             <div class="entry-content">
                                                 <p>Summer hat 2021 woman's</p>
                                             </div>
                                         </div>
                                     </div>
-
                                 </article>
 
                                 <article class="post">
-
                                     <div class="post-thumbnail">
                                         <img src="./images/posts/post3.png" class="img-fluid" alt="Top Jeans Collection">
                                     </div>
@@ -975,23 +889,18 @@
                                             <div class="entry-categories mb-3">
                                                 <a href="#">#hat</a>
                                             </div>
-                                            <div class="entry-title mb-4">
-                                                <h3 class="heading-font">By cheaper <br>with your friends</h3>
-                                            </div>
+                                            <h3 class="entry-title mb-4 heading-font">By cheaper <br>with your friends</h3>
                                             <div class="entry-content">
                                                 <p>Summer hat 2021 woman's</p>
                                             </div>
                                         </div>
                                     </div>
-
                                 </article>
 
                                 <article class="post piece">
-
                                     <div class="post-thumbnail">
                                         <img src="./images/posts/post4.png" class="img-fluid" alt="Top Jeans Collection">
                                     </div>
-
                                 </article>
 
                         </div>
@@ -1038,7 +947,7 @@
                         
                         <div class="row">
                             
-                            <div class="col-lg-2 col-md-6">
+                            <div class="col-md-6 col-lg-2">
                                     
                                 <div class="widget widget-custom-html">
                                     <div class="widget-content">
@@ -1062,13 +971,12 @@
 
                             </div>
 
-                            <div class="col-lg-2 col-md-6 offset-xl-1">
+                            <div class="col-md-6 col-lg-2 offset-xl-1">
                                     
                                 <div class="widget widget-custom-html">
                                     <div class="widget-content">
                                         <P class="mb-3 fw-semi-bold">FOLLOW US</P>
                                         <div class="widget widget-social mb-5">
-
                                             <div class="widget-content">
                                                 <ul class="social-icons d-flex align-items-center p-0">
                                                     <li><a href="#" target="_blank" title="Facebook"><i class="fab fa-instagram"></i></a></li>
