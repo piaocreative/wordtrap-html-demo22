@@ -30,10 +30,12 @@
 	}
 
 	.widget-title {
-		color: #faf7fa;		
-		font-size: 0.875rem;
-		margin-bottom: 1.375rem;
 		font-family: 'Open Sans';
+		color: #61605f;
+		display: block;
+		text-decoration: none;
+		font-size: .875rem;
+		font-weight: 500;
 	}	
 
 	// Widget - Social
@@ -50,15 +52,19 @@
 				}
 		
 				a {
-					background-color: #282828;					
-					color: $white;
+					background-color: #282828;
+					color: #fff;
 					display: inline-block;
 					line-height: 1.8125rem;
-					width: 1.8125rem;
-					height: 1.8125rem;		
+					width: 2.8125rem;
+					height: 2.8125rem;
 					vertical-align: middle;
+					padding: 0.5rem;
 					text-align: center;
+					border-radius: 50%;
+
 					@include border-radius(50%);
+					
 					@include transition(all 0.3s ease-in-out);
 		
 					&:hover {
