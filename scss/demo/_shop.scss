@@ -50,7 +50,7 @@
 .products-title {
     color: #343434;
     font-size: 1.5rem;
-    font-family: myFont;
+    font-family: $body-font;
 }
 
 .product {
@@ -128,7 +128,6 @@
 			color: $heading-color;
 			text-decoration: none;
 		}
-
 	}
 
 	.product-rating {
@@ -168,7 +167,6 @@
 	
 	.add-to-cart,
 	.add-to-wishlist {
-
 		background-color: #302f2d;
 		display: inline-block;
 		color: $white;
@@ -185,6 +183,7 @@
 			line-height: 1;
 		}
 	}
+
 	&:hover {
 		.product-btns {
 			opacity: 1;
@@ -203,6 +202,7 @@
 	.product-details {
 		padding:0.875rem !important;
 	}
+
 	.product-title {
 		margin-bottom:-1rem !important;
 	}
@@ -268,6 +268,7 @@
 .ads {
     position: relative;
     display: block;
+
     .ads-body {
         position: absolute;
         left: 0;
@@ -313,14 +314,11 @@
 		&.ads1 {
 			height: 12rem !important;
 		}
-
 	} 
-
 }
 
 // promotions part //
 #promotions {
-
 	background: url('../images/posts/promotion.png');
 	background-size: cover;
 	background-position: 50%;
@@ -329,14 +327,6 @@
 		width: 25%;
 		margin: auto;
 		position: relative;
-
-		@include media-breakpoint-down(lg) {
-			width: 50% !important;
-		}
-
-		@include media-breakpoint-down(sm) {
-			width: 90% !important;
-		}
 
 		input {
 			border-radius: 0;
@@ -347,17 +337,17 @@
 
 		button {
 			position: absolute;
-			padding: 0.5rem;
+			padding: 1rem;
 			right: 0.5rem;
-			top: 0.5rem;
+			top: -0.25rem;
 		}
-
 	}
 
 	@include media-breakpoint-down(sm) {
+		width: 90% !important;
+
 		.heading-block {
 			margin: 0.5rem !important;
 		}
 	}
-
 }

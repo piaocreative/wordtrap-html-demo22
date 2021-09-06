@@ -12,7 +12,6 @@
 }
 
 #contact-info {
-
     h5 {
         font-weight: 400 !important;
         line-height: 2rem;
@@ -21,7 +20,6 @@
 }
 
 #contact-sidebar {
-
     position: absolute;
     right: 13rem;
     bottom: 0;
@@ -33,31 +31,22 @@
     }
 
     form {
-
         .btn-primary {
-            
             letter-spacing: 0.1rem;
-    
         }
-
     }
 }
 
 @include media-breakpoint-down(xl) {
-    
     #contact-sidebar  {
         position: relative;
         right: 0;
         width: 100% !important;
     }
-
 }
 
 @include media-breakpoint-down(lg) {
-
     #contact {
-
         padding: 1rem;
-        
     }
 }
