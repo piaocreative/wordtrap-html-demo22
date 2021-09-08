@@ -22,7 +22,7 @@
 
 	// Transparent header
 	&.transparent-header {
-		background-color: #857db8;
+		background-color: $white;
 		z-index: 199;
 
 		@include media-breakpoint-up(lg) {
@@ -39,14 +39,9 @@
 	}
 }
 
-#header-wrap {
-	padding-left: 4.375rem;
-	padding-right: 4.375rem;
-
-	@include media-breakpoint-down(sm) {
-		padding-left: 2.375rem;
-		padding-right: 2.375rem;
-	}
+.navbar {
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
 }
 
 .nav {
@@ -55,6 +50,8 @@
 
 .navbar-toggler {
 	border-radius: 0;
+	border: 0;
+	padding: 0;
 }
 
 .navbar-collapse {
@@ -79,19 +76,37 @@
 	margin-right: 2.25rem;
 
 	img {
-		width: 60%;
+		max-width: 6.5rem;
 		height: auto;
 	}
 }
 
 
-
-
 /* ----------------------------------------------------------------
-	Mega Menu
+	Primary Menu
 -----------------------------------------------------------------*/
 
-// Please ignore mega menu now 
+#primary-menu {
+	.nav-link {
+		color: $primary-menu-font-color;
+		display: block;
+		font-family: $primary-menu-font;
+		font-weight: $primary-menu-font-weight;
+		font-size: $primary-menu-font-size;
+		letter-spacing: $primary-menu-font-spacing;
+		text-transform: $primary-menu-font-tt;	
+		padding: 0.5rem 1rem;	
+	}
+
+	.nav-item {
+		@include transition(all 0.3s ease-in-out);
+
+		&.current,
+		&:hover {
+			background-color: $theme-color;			
+		}
+	}
+}
 
 
 /* ----------------------------------------------------------------
@@ -100,13 +115,6 @@
 
 
 #top-btns {
-	padding-top: 1rem;
-	margin-right: 30rem;
-
-	@include media-breakpoint-up(lg) {
-		padding-top: 0;
-	}
-	
 	.nav-item:not(:first-child) {
 		margin-left: 1.25rem;
 	}
@@ -185,7 +193,8 @@
 		left: 0;
 		width: 100%;		
 		margin: 0;
-		border-top: 3px solid $link-hover-color;
+		border-top: 3px solid $theme-color;
+
 		@include border-radius(0);
 		@include box-shadow(0 0 5px -1px rgba($black, 0.2));
 
@@ -221,22 +230,6 @@
 	Top Infos
 -----------------------------------------------------------------*/
 
-#top-infos {
-	display: flex;
-
-	.phone-number {
-		margin-right: 2.875rem;
-		
-		a {
-			color: $topbar-color;
-			margin-left: 1.75rem;
-
-			&:hover {
-				color: $topbar-hover-color;
-			}
-		}
-	}
-}
 
 
 /* ----------------------------------------------------------------

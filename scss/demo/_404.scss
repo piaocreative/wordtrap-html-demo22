@@ -5,56 +5,69 @@
 -----------------------------------------------------------------*/
 
 
-.error-logo {
+.error {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;    
+    position: relative;
 
-    @include media-breakpoint-down(lg) {
-        text-align: center;
-    }
+    @include media-breakpoint-up(lg) {
+        padding-top: 15.625rem;
+        padding-bottom: 15.625rem;
 
-    h2 {
-        font-size: 12.6875rem !important;
-
-        @include media-breakpoint-down(sm) {
-            font-size: 6.875rem !important;
+        &::before {
+            content: "";
+            background-image: url(../images/404/404.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
         }
     }
 
+    .error-content {
+        @media (min-width: 1600px) {
+            display: flex;
+
+            #error-sidebar {
+                margin-left: 16.66667%;
+                padding-top: .75rem;
+            }
+        }
+    }
+}
+
+#error-logo {
+    h2 {
+        font-size: 12.6875rem;
+    }
+
     p {
-        font-size: 1.125rem !important;
+        font-size: 1.125rem;
     }
     
 }
 
 #error-sidebar {
-
-    // padding-top: 12rem;
-
-    @include media-breakpoint-down(lg) {
-        padding: 2rem !important;
-    }
+    padding-top: 3rem;
 
     h5 {
         font-size: 0.875rem;
         margin-bottom: 2rem;
         letter-spacing: 0.05rem;
         color: #535353;
-
-        @include media-breakpoint-down(lg) {
-            text-align: center;
-        }
     }
 
     ul {
-
         padding: 0;
         list-style: none;
 
         li {
-
-            width: 58%;
-
-            @include media-breakpoint-down(lg) {
-                margin: auto;
+            &:nth-child(2n+1) {
+                background-color: #f9f9f9;
             }
 
             a {                
@@ -67,17 +80,15 @@
                 text-decoration: none;
                 width: 100%;
                 border-radius: 4rem;
-                font-size: 1rem;
+                font-size: 1rem;            
                 
-                &.bg {
-                    background-color: #f9f9f9;
-                }
+                @include transition(all 0.3s ease-in-out);
 
                 &:hover {
-                    color: $theme-color;
+                    background-color: $theme-color;
+                    color: $white;
                 }
-            }
-            
+            }            
         }
     }
 }

@@ -19,6 +19,7 @@
 -----------------------------------------------------------------*/
 .category {
 	position: relative;		
+	
 	@include transition(all 0.5s ease-in-out);
 
 	.category-desc {
@@ -148,7 +149,6 @@
 		grid-gap: 0.5rem;
 		padding: .875rem;
 		z-index: 2;
-		@include transition(all 0.3s ease-in-out);
 	}
 
 	.price-brand {
@@ -172,15 +172,24 @@
 		color: $white;
 		padding: 1rem;
 		z-index: 1;
-		@include transition(all 0.3s ease-in-out);		
 
-		&:hover {
-			color: $theme-color;
-		}
+		@include transition(all 0.3s ease-in-out);
 
 		i {
 			font-size: 1.25rem;
 			line-height: 1;
+		}
+	}
+
+	.add-to-cart {
+		&:hover {
+			background-color: $theme-color;
+		}
+	}
+
+	.add-to-wishlist {
+		&:hover {
+			color: $theme-color;
 		}
 	}
 
@@ -193,6 +202,26 @@
 			> a:nth-of-type(2) {
 				z-index: 1;
 				opacity: 1;
+			}
+		}
+	}
+
+	&.product-flat {
+		@include media-breakpoint-up(xl) {
+			display: flex;
+
+			.product-image {
+				width: 50%;
+			}
+
+			&.product-reverse {
+				.product-image {
+					order: 1;
+				}
+
+				.product-details {
+					order: 0;
+				}
 			}
 		}
 	}
@@ -274,47 +303,8 @@
         left: 0;
         top: 0;
         width: 100%;
-        height: 100%;
-
-		p {
-			font-size: 4.5rem;
-		}
-	
-		a {
-			text-decoration: none;
-		}
-
-		h2 {
-			line-height: 5rem;
-		}
-    }
-
-	@include media-breakpoint-down(lg) {
-		padding: 0 !important;
-
-		.ads-body {
-			padding: 0 !important;
-			align-items: center !important;
-
-			h2 {
-				line-height: 3.5rem;
-			}
-		}
-
-		&.ads1 {
-			height: 20rem;
-
-			img {
-				height: 100%;
-			}
-		}
-	}
-
-	@include media-breakpoint-down(md) {
-		&.ads1 {
-			height: 12rem !important;
-		}
-	} 
+        height: 100%;		
+    }	
 }
 
 // promotions part //
@@ -324,13 +314,13 @@
 	background-position: 50%;
 
 	form {
-		width: 25%;
+		width: 100%;
 		margin: auto;
 		position: relative;
 
 		input {
 			border-radius: 0;
-			background-color: #e5e6e1 !important;
+			background-color: transparent;
 			border-bottom: 1px solid #c3c3c3;
 			padding-left:0;
 		}
@@ -343,11 +333,58 @@
 		}
 	}
 
-	@include media-breakpoint-down(sm) {
-		width: 90% !important;
+	// @include media-breakpoint-down(sm) {
+	// 	width: 90% !important;
 
-		.heading-block {
-			margin: 0.5rem !important;
+	// 	.heading-block {
+	// 		margin: 0.5rem !important;
+	// 	}
+	// }
+}
+
+
+/* Ads
+-----------------------------------------------------------------*/
+
+.ads {
+	position: relative;
+	display: block;
+	margin-bottom: 2.5rem;
+
+	.ads-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		.ads-bg-img {
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
+	}
+
+	.ads-body {
+		position: relative;
+		z-index: 1;
+	}
+
+	&.ads1 {
+		height: 15.625rem;
+	}
+
+	&.ads2 {
+		height: 15.625rem;
+
+		@include media-breakpoint-up(lg) {
+			height: 26.125rem;
+		}		
 	}
 }

@@ -17,31 +17,42 @@
 
 
 #banner {
-    position: relative;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    position: relative;           
 
-    @media (min-width: 1200px) {
-        height: 100%;
+    &.home-banner {
+        background-image: url(../images/banner/banner_bg.png);
+        height: 47.375rem; 
     }
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    .banner-wrap {
-        padding-left: 4.375rem;
-        padding-right: 4.375rem;
+    &.page-banner {
+        background-image: url(../images/banner/page_banner_bg.png);        
+        height: auto;
+        padding-top: $spacer * 10;
+        padding-bottom: $spacer * 7.5;
     }
 }
-.about-banner {
-    padding-right: 10rem;
 
-    @include media-breakpoint-down(lg) {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+.about-banner {
+    padding-top: 11rem;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+        &::before {
+            content: "";
+            background-image: url(../images/about/about2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }    
 
     p {
         font-size: 1.25rem;
@@ -86,5 +97,4 @@
             font-size: 3rem;
         }
     }
-
 }

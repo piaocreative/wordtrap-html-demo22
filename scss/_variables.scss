@@ -73,21 +73,32 @@ $topbar-hover-color:            #ddcef5;
 
 //-------------------- Header --------------------//
 
-$header-height:                 5.5rem;
+$header-height:                 7.75rem;
 
 // Sticky Header
-$sticky-header-height:          5.625rem;
-
+$sticky-header-height:          5.875rem;
 
 // top Button
 $top-btn-font-size:        		  1.25rem;
 $top-btn-font-color:       		#ffffff;
 
 
+//-------------------- Primary Menu --------------------//
+
+$primary-menu-padding:			    3.53125rem;
+$sticky-menu-padding:			      2.53125rem;
+
+$primary-menu-font:             $body-font;
+$primary-menu-font-weight:      400;
+$primary-menu-font-size:        0.9375rem;
+$primary-menu-font-tt:          initial;
+$primary-menu-font-color:       #ffffff;
+$primary-menu-font-spacing:     0;
+
+
 //-------------------- Section --------------------//
 
 $section-spacer:				5rem;
-
 
 
 // Forms
@@ -143,8 +154,6 @@ $btn-border-width:              1px;
 $btn-border-radius:             4rem;
 $btn-border-radius-sm:          0.916rem;
 $btn-border-radius-lg:          1.83rem;
-
-
 
 
 //-------------------- Social Icons Colors --------------------//

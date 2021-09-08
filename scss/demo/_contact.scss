@@ -8,7 +8,22 @@
 }
 
 #contact {
-    padding-bottom: 10rem;
+    padding-top: 11rem;    
+    position: relative;
+    
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 10rem;
+    }
+
+    #map {
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            right: 0;
+            top: 0;
+        }        
+    }
 }
 
 #contact-info {
@@ -26,7 +41,7 @@
     background-color: $body-color;
     width: 32%;
     
-    img{
+    img {
         width: 100%;
     }
 
@@ -34,19 +49,5 @@
         .btn-primary {
             letter-spacing: 0.1rem;
         }
-    }
-}
-
-@include media-breakpoint-down(xl) {
-    #contact-sidebar  {
-        position: relative;
-        right: 0;
-        width: 100% !important;
-    }
-}
-
-@include media-breakpoint-down(lg) {
-    #contact {
-        padding: 1rem;
     }
 }

@@ -17,12 +17,6 @@
 
 #page-title {
 	position: relative;
-	padding: 10rem 12rem 12rem 0;
-
-	@include media-breakpoint-down(lg) {
-		padding: 2rem;
-		padding-bottom: 0 !important;
-	}
 
 	p {
 		color: $white;

@@ -40,12 +40,15 @@
 
 	// Widget - Social
 	&.widget-social {
-		.social-icons {
-			
+		.social-icons {			
 			list-style: none;
 
 			li {
 				padding: 0 0.25rem;
+
+				&:first-child {
+					padding-left: 0;
+				}
 
 				&:last-child {
 					padding-right: 0;
@@ -63,9 +66,8 @@
 					text-align: center;
 					border-radius: 50%;
 
-					@include border-radius(50%);
-					
-					@include transition(all 0.3s ease-in-out);
+					@include border-radius(50%);					
+					@include transition(all 0.3s ease-in-out);					
 		
 					&:hover {
 						background-color: $theme-color;
@@ -80,8 +82,6 @@
 			}
 		}
 	}
-
-
 
 	// Widget - Links
 	&.widget-links {
@@ -100,41 +100,21 @@
 					&:hover {
 						color: $theme-color;
 					}
-					
-					@include media-breakpoint-down(sm) {
-						font-size: 0.325rem;
-					}
 				}
 			}
 		}
 	}
 
-	@include media-breakpoint-down(md) {
-
-		&.widget-links {
-
-			.widget-content {
-				justify-content: space-between;
-			}
-
-			ul {
-				width: auto;
-				margin: auto;
-			}
-		}
-}
-
 	// Widget - Payments
 	&.widget-payment {
-
 		p {
 			color: #61605f;
 			display: block;
 			text-decoration: none;
 			font-size: 0.675rem;
 		}
-		.payments {
 
+		.payments {
 			.payment-icon {
 				display: inline-block;
 				vertical-align: middle;
@@ -170,6 +150,7 @@
 	// Widget - custom html
 	&.widget-custom-html {
 		margin-right: 1rem;
+
 		.widget-content {
 			p, a {
 				color: #61605f;
@@ -196,8 +177,8 @@
 			p {
 				letter-spacing: 0.1rem
 			}
-			#widget-feedback-form {
 
+			#widget-feedback-form {
 				input {
 					background-color: #f9f9f9;
 					color:#d0d0d0;

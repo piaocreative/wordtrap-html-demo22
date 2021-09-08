@@ -52,29 +52,16 @@ a {
     }
 }
 
-#about-content {
-	padding: 1rem;
-    p {
-        font-size: 1.2rem;
-        color: #454543;
-    }
-
-    @include media-breakpoint-down(lg) {
-        p {
-            margin: 2rem !important;
-        }
-    }
-
-    h3 {
+#history {
+	h3 {
         font-size: 2.5rem;
         color: #d0d0d0 !important;
     }
-}
 
-.posts {
-	@include media-breakpoint-down(lg) {
-		margin: 0 !important;
-	}
+	p {
+        font-size: 1.2rem;
+        color: #454543;
+    }    
 }
 
 // Carosel arrow color change //

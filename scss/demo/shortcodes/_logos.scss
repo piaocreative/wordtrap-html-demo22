@@ -4,8 +4,8 @@
 
 	.logo-item {
 		border: 1px solid #eaeaea;
-		border-radius: 0.3125rem;
-		max-width: 10.625rem;
+		// border-radius: 0.3125rem;
+		// max-width: 10.625rem;
 		height: 6.25rem;
 		width: 100%;		
 		display: flex;
@@ -16,10 +16,9 @@
 			width: auto;
 			height: auto;
 		}
+	}
 
-		@include media-breakpoint-down(sm) {
-			margin-left: 0.5rem;
-			margin-right: 0.5rem;
-		}
+	.slick-slide {
+		padding: 0 1.25rem;
 	}
 } 

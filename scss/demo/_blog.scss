@@ -9,24 +9,31 @@
 	Blog
 -----------------------------------------------------------------*/
 
+#posts {
+	height: 20.75rem;
+}
+
 .post {
 	position: relative;
-
-	@include media-breakpoint-down(lg) {
-		text-align: center;
-	}
+	padding: 0 1.25rem;		
 }
 
 .post-thumbnail {
 	display: block;
 	position: relative;
 	width: 100%;
-	height: auto;
+	height: 20.75rem;
+
+	img {
+		object-fit: cover;
+		object-position: center;
+		height: 100%;
+		width: 100%;
+	}
 
 	a {
 		display: block;
 	}
-
 }
 
 .post-content {
@@ -53,8 +60,7 @@
 			font-size: 1.1875rem;
 		}
 
-	}
-	
+	}	
 }
 
 .piece {
@@ -62,4 +68,3 @@
 		display: none;
 	}
 }
-
