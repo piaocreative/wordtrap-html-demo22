@@ -1,0 +1,533 @@
+<!doctype html>
+<html dir="ltr" lang="en-US">
+<head>
+	<!-- Meat Tags
+	============================================= -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="JohnPiao" />
+
+	<!-- Fonts
+	============================================= -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+	<!-- Fontawesome
+	============================================= -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" type="text/css" />
+	<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+
+	<!-- Slick
+	============================================= -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+	<!-- Bootstrap JS
+	===============================================-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- Document Title
+	============================================= -->
+	<title>Demo22 | Wordtrap</title>
+</head>
+<body id="checkout-page">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+        <header id="header" class="transparent-header">
+
+            <!-- Navbar
+            ============================================= -->
+            <nav class="navbar navbar-light">
+
+                <div class="container">
+
+                    <!-- Logo
+                    ============================================= -->
+                    <a href="index.html" class="navbar-brand" data-dark-logo="images/logo.png">
+                        <img src="images/logo.png" alt="Wordtrap Logo">
+                    </a>
+
+                    <!-- Top Links
+                    ============================================= -->
+                    <ul id="top-links" class="nav align-items-center d-none d-lg-flex">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">USD</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">EUR</a></li>
+                                <li><a href="#" class="dropdown-item">AUD</a></li>
+                                <li><a href="#" class="dropdown-item">GBP</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">ENG</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item"><img src="images/icons/flags/french.png" alt="French"> FR</a></li>
+                                <li><a href="#" class="dropdown-item"><img src="images/icons/flags/italian.png" alt="Italian"> IT</a></li>
+                                <li><a href="#" class="dropdown-item"><img src="images/icons/flags/german.png" alt="German"> DE</a></li>
+                            </ul>
+                        </li>
+                    </ul><!-- #top-links -->
+
+                    <!-- Top Buttons
+                    ============================================= -->
+                    <ul id="top-btns" class="nav mx-auto d-none d-lg-flex align-items-center">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="far fa-heart"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="far fa-user"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="modal" href="#modalShoppingCart">
+                                <span data-cart-items="2">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul><!-- #top-btns -->
+
+                    <!-- Navbar Toggler
+                    ============================================= -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                </div>
+
+            </nav>
+
+            <!-- Navbar Collapse
+            ============================================= -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <div class="container">
+
+                    <!-- Primary Navigation
+					============================================= -->
+					<ul id="primary-menu" class="navbar-nav navbar-dark">
+						<li class="nav-item">
+							<a href="index.html" class="nav-link">Home</a>
+						</li>
+						<li class="current nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">eCommerce</a>
+							<ul class="dropdown-menu">
+								<li class="nav-item">
+									<a href="shop.html" class="nav-link">Shop</a>
+								</li>
+								<li class="nav-item">
+									<a href="product.html" class="nav-link">Single Product</a>
+								</li>
+								<li class="nav-item">
+									<a href="cart.html" class="nav-link">Cart</a>
+								</li>
+								<li class="current nav-item">
+									<a href="checkout.html" class="nav-link">Checkout</a>
+								</li>
+								<li class="nav-item">
+									<a href="wishlist.html" class="nav-link">My Wishlist</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">Pages</a>
+							<ul class="dropdown-menu">
+								<li class="nav-item">
+									<a href="about.html" class="nav-link">About</a>
+								</li>
+								<li class="nav-item">
+									<a href="faqs.html" class="nav-link">FAQs</a>
+								</li>
+								<li class="nav-item">
+									<a href="team.html" class="nav-link">Meet the team</a>
+								</li>
+								<li class="nav-item">
+									<a href="member.html" class="nav-link">Team Member</a>
+								</li>
+								<li class="nav-item">
+									<a href="404.html" class="nav-link">404</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="contact.html" class="nav-link">Contact Us</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">Blog</a>
+							<ul class="dropdown-menu">
+								<li class="nav-item">
+									<a href="blog.html" class="nav-link">Archive</a>
+								</li>
+								<li class="nav-item">
+									<a href="single-post.html" class="nav-link">Single Post</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- #primary-menu -->
+
+                    <!-- Top Links
+					============================================= -->
+					<ul id="top-links" class="navbar-nav flex-row justify-content-center align-items-center d-lg-none">
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">USD</a>
+							<ul class="dropdown-menu">
+								<li><a href="#" class="dropdown-item">EUR</a></li>
+								<li><a href="#" class="dropdown-item">AUD</a></li>
+								<li><a href="#" class="dropdown-item">GBP</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">ENG</a>
+							<ul class="dropdown-menu">
+								<li><a href="#" class="dropdown-item"><img src="images/icons/flags/french.png" alt="French"> FR</a></li>
+								<li><a href="#" class="dropdown-item"><img src="images/icons/flags/italian.png" alt="Italian"> IT</a></li>
+								<li><a href="#" class="dropdown-item"><img src="images/icons/flags/german.png" alt="German"> DE</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link"><i class="fas fa-search"></i></a>
+						</li>
+					</ul><!-- #top-links -->
+
+					<!-- Top Buttons
+					============================================= -->
+					<ul id="top-btns" class="navbar-nav flex-row justify-content-center align-items-center d-lg-none">
+						<li class="nav-item">
+							<a href="#" class="nav-link"><i class="far fa-heart"></i></a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link"><i class="far fa-user"></i></a>
+						</li>
+						<li class="nav-item">
+							<a href="#modalShoppingCart" class="nav-link" data-toggle="modal">
+								<span data-cart-items="2">
+									<i class="fas fa-shopping-cart"></i>
+								</span>
+							</a>
+						</li>
+					</ul><!-- #top-btns -->
+
+                </div>
+
+            </div>
+
+        </header><!-- #header -->
+
+		<!-- Content
+		============================================= -->
+		<main id="content">
+
+			<div class="page-content">
+
+				<!-- Banner
+                ============================================= -->
+                <section class="banner page-banner">
+
+					<div class="container">
+
+						<div id="page-title">
+							<h1 class="title">Checkout</h1>
+						</div>
+
+					</div>
+
+                </section><!-- #banner -->
+
+				<div class="section pt-0">
+
+					<div class="container">
+
+						<div class="row">
+							<div class="col-lg-8">
+								<form name="checkout" method="post" class="checkout" action="/" enctype="multipart/form-data" novalidate="novalidate">
+									<h3>Billing details</h3>
+									<div class="mb-3">
+										<label class="form-label" for="billing_first_name">First name</label>
+										<div class="required-field">
+											<input type="text" value="" class="form-control" name="billing_first_name" id="billing_first_name" required="required">
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="billing_last_name">Last name</label>
+										<div class="required-field">
+											<input type="text" value="" class="form-control" name="billing_last_name" id="billing_last_name" required="required">
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="billing_company">Company name</label>
+										<div>
+											<input type="text" value="" class="form-control" name="billing_company" id="billing_company" required="">
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="billing_country">Country / Region</label>
+										<div class="required-field">
+											<input type="text" value="" class="form-control" name="billing_country" id="billing_country" required="required">
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="billing_address_1">Street address</label>
+										<div class="required-field">
+											<input type="text" value="" class="form-control" name="billing_address_1" id="billing_address_1" required="required">
+										</div>
+										<div class="required-field mt-2">
+											<input type="text" value="" class="form-control" name="billing_address_2" id="billing_address_2" required="required">
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="billing_city">Town / City</label>
+										<div class="required-field">
+											<input type="text" value="" class="form-control" name="billing_city" id="billing_city" required="required">
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="billing_state">Province</label>
+										<div class="required-field">
+											<input type="text" value="" class="form-control" name="billing_state" id="billing_state" required="required">
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="billing_postcode">Postal code</label>
+										<div class="required-field">
+											<input type="text" value="" class="form-control" name="billing_postcode" id="billing_postcode" required="required">
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="billing_phone">Phone</label>
+										<div class="required-field">
+											<input type="tel" value="" class="form-control" name="billing_phone" id="billing_phone" required="required">
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="billing_email">Email address</label>
+										<div class="required-field">
+											<input type="email" value="" class="form-control" name="billing_email" id="billing_email" required="required">
+										</div>
+									</div>
+									<div class="mb-5">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="create_account" id="create_account">
+											<label class="form-check-label" for="create_account">Create an account?</label>
+										</div>
+									</div>
+									<h3>Additional information</h3>
+									<div class="mb-3">
+										<label class="form-label" for="order_comments">Order notes</label>
+										<div>
+											<textarea maxlength="5000" rows="8" class="form-control" name="order_comments" id="order_comments" required="" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="col-lg-4">
+								<div class="order-details">
+
+									<h3>Your Order</h3>
+
+									<table cellspacing="0" class="table shop-table">
+										<thead>
+											<tr>
+												<th class="product-name">Product</th>
+												<th class="product-total">Subtotal</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="cart_item">
+												<td class="product-name">Dumbbells&nbsp;<strong class="product-quantity">×&nbsp;3</strong></td>
+												<td class="product-total">$199</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr class="cart-subtotal">
+												<th>Subtotal</th>
+												<td>$597</td>
+											</tr>
+											<tr class="shipping">
+												<td colspan="2">
+													<p class="text-uppercase mb-1">Shipping</p>
+													<div class="shipping-method">
+														<div class="form-check">
+															<input class="form-check-input" type="radio" name="shipping_method" id="shipping_method_free" checked>
+															<label class="form-check-label" for="shipping_method_free">Free Shipping</label>
+														</div>
+														<div class="form-check">
+															<input class="form-check-input" type="radio" name="shipping_method" id="shipping_method_local">
+															<label class="form-check-label" for="shipping_method_local">Local Pickup</label>
+														</div>
+														<div class="form-check">
+															<input class="form-check-input" type="radio" name="shipping_method" id="shipping_method_flat">
+															<label class="form-check-label" for="shipping_method_flat">Flat rate: $5.00</label>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr class="order-total">
+												<th>Total</th>
+												<td>$597</td>
+											</tr>
+										</tfoot>
+									</table>
+									<div class="checkout-payment mb-5">
+										<p class="text-uppercase mb-1">Payment Methods</p>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="payment_method" id="payment_method_cash" checked>
+											<label class="form-check-label" for="payment_method_cash">Cash on delivery</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="payment_method" id="payment_method_paypal">
+											<label class="form-check-label" for="payment_method_paypal">Paypal</label>
+										</div>
+										<img src="images/payments/payments.png" class="img-fluid" alt="Payments">
+									</div>
+									<a href="checkout.html" class="btn btn-primary">Place Order</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div><!-- .page-content -->
+
+		</main><!-- #content -->
+
+		<!-- Footer
+        ============================================= -->
+        <footer id="footer">
+
+            <!-- Footer Main
+            ============================================= -->
+            <div id="footer-main" class="text-center text-md-start">
+
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-6 col-xl-2">
+
+                            <div class="widget widget-custom-html">
+                                <h3 class="widget-title">OUR ADDRESS</h3>
+                                <div class="widget-content">
+                                    <p class="mb-2 text-white h4 heading-font">New York</p>
+                                    <p class="mb-0">5686 Edverano Center</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 col-xl-3 offset-xl-1 pt-4 pt-md-0">
+
+                            <div class="widget widget-custom-html">
+                                <h3 class="widget-title">CALL NOW</h3>
+                                <div class="widget-content">
+                                    <a href="callto:1234567890" class="mb-2 text-white h4 heading-font">123-456-7890</a>
+                                    <a href="mailto:info@gmail.com">info@gmail.com</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 col-xl-2 pt-4 pt-xl-0">
+
+                            <div class="widget widget-custom-html">
+                                <div class="widget-content">
+                                    <h3 class="widget-title">FOLLOW US</h3>
+                                    <div class="widget widget-social">
+                                        <div class="widget-content">
+                                            <ul class="social-icons d-flex align-items-center justify-content-center justify-content-md-start p-0 m-0">
+                                                <li><a href="#" target="_blank" title="Facebook"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#" target="_blank" title="Twitter"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#" target="_blank" title="telegram"><i class="fab fa-telegram-plane"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 col-xl-3 offset-xl-1 pt-4 pt-xl-0">
+
+                            <div class="widget widget-payment">
+                                <div class="widget-content">
+                                    <h3 class="widget-title">PAYMENTS</h3>
+                                    <div class="payments">
+                                        <span class="payment-icon visa"></span>
+                                        <span class="payment-icon paypal"></span>
+                                        <span class="payment-icon mastercard"></span>
+                                        <span class="payment-icon express"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><!-- #footer-main -->
+
+            <!-- Footer Bottom
+            ============================================= -->
+            <div class="bg-black py-3" id="footer-bottom">
+
+                <div class="container">
+
+                    <div class="row align-items-center">
+                        <div class="col-md-auto me-md-auto">
+
+                            <div class="widget widget-links">
+                                <div class="widget-content">
+                                    <ul class="m-0 p-0 d-flex gap-2 gap-md-5 text-center flex-column flex-md-row">
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Our Service</a></li>
+                                        <li><a href="#">Order Tracking</a></li>
+                                        <li><a href="#">Shipping & Delivery</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-auto pt-3 pt-md-0">
+
+                            <p id="copyrights" class="text-center text-md-end mb-0">&copy; Copyrights 2021 Wordtrap</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><!-- #footer-bottom -->
+
+        </footer><!-- #footer -->
+
+	</div>
+
+	<!-- External JavaScripts
+	============================================= -->
+
+	<!-- jQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+	<!-- Slick JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- Theme JS -->
+	<script src="js/main.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+
+</body>
+</html>

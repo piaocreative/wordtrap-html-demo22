@@ -1,0 +1,817 @@
+
+/* ----------------------------------------------------------------
+
+	page.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Page
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for page. Thanks!
+-----------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------
+	Page Title
+-----------------------------------------------------------------*/
+
+#page-title {
+	position: relative;
+
+	.title {
+		font-weight: 400;
+	}
+
+	.sub-title {
+		color: $theme-color;
+		margin: 0;
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Sidebar
+-----------------------------------------------------------------*/
+
+.sidebar {
+	@include media-breakpoint-down(lg) {
+		margin-top: 1.875rem;
+	}
+
+	.widget {
+		margin-bottom: 1.875rem;
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Subscribe Section
+-----------------------------------------------------------------*/
+
+#subscribe {
+	background: url('../images/pages/subscribe-bg.png');
+	background-size: cover;
+	background-position: center;
+	padding-top: 6.375rem;
+	padding-bottom: 6.375rem;
+
+	#subscribe-form {
+		width: 100%;
+		margin: auto;
+		position: relative;
+
+		.form-control {
+			border-radius: 0;
+			background-color: transparent;
+			border-bottom: 1px solid $gray-200;
+			padding-left:0;
+		}
+
+		.btn {
+			position: absolute;
+			padding: 1rem;
+			right: 0.5rem;
+			bottom: 0.875rem;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	About Page
+-----------------------------------------------------------------*/
+
+#about-page {
+	#about-us {
+		padding-top: 11rem;
+		position: relative;
+
+		@include media-breakpoint-up(lg) {
+			&::before {
+				content: "";
+				background-image: url(../images/pages/about/about_us_bg.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				width: 50%;
+				height: 100%;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Contact Page
+-----------------------------------------------------------------*/
+
+#contact-page {
+	.page-content {
+		padding-top: 11rem;
+		position: relative;
+
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 10rem;
+		}
+
+		#contact-content {
+			.contact-info {
+				h3 {
+					color: $gray-200;
+					font-family: $body-font;
+					font-size: 0.875rem;
+					font-weight: 600;
+					margin-bottom: 0.625rem;
+				}
+			}
+		}
+
+		#contact-form-content {
+			margin-top: 2.8125rem;
+
+			#contact-form {
+				min-width: 23.25rem;
+
+				.form-control {
+					border-radius: 4rem;
+				}
+
+				.input-group-append {
+					margin-left: -2.875rem;
+				}
+			}
+
+			p {
+				color: $gray-200;
+			}
+
+			@include media-breakpoint-up(xxl) {
+				display: flex;
+				align-items: center;
+
+				p {
+					margin-left: 1.875rem;
+				}
+			}
+		}
+
+		#map {
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				width: 50%;
+				height: 100%;
+				right: 0;
+				top: 0;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	404 Page
+-----------------------------------------------------------------*/
+
+#error-404-page {
+	#error-404 {
+		padding-top: 13.125rem;
+		padding-bottom: 12rem;
+		position: relative;
+		z-index: 0;
+
+		.container {
+			position: relative;
+			z-index: 1;
+		}
+
+		&::before {
+			content: "";
+			background-image: url(../images/pages/404/404.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		&::after {
+			content: "";
+			background-color: rgba($white, 0.7);
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		@include media-breakpoint-up(lg) {
+			&::before {
+				width: 50%;
+			}
+
+			&::after {
+				display: none;
+			}
+		}
+
+		#page-title {
+			h1 {
+				font-size: 12.5rem;
+				line-height: 1;
+				margin: 0;
+			}
+		}
+	}
+
+	#error-sidebar {
+		h5 {
+			font-size: 0.875rem;
+			margin-bottom: 2.25rem;
+			letter-spacing: 0.05rem;
+			color: $gray-300;
+		}
+
+		ul {
+			padding: 0;
+			list-style: none;
+
+			li {
+				@include media-breakpoint-up(lg) {
+					max-width: 10rem;
+
+					&:nth-child(2n+1) {
+						a {
+							background-color: $light;
+						}
+					}
+
+					a {
+						@include transition(all 0.3s ease-in-out);
+
+						&:hover {
+							background-color: $theme-color;
+							color: $white;
+						}
+					}
+				}
+
+				a {
+					font-size: 1rem;
+					border-radius: 3rem;
+					color: $body-color;
+					display: inline-block;
+					font-weight: 300;
+					line-height: 1;
+					padding: 0.9375rem 1.375rem;
+					text-decoration: none;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Team Member Page
+-----------------------------------------------------------------*/
+
+.team-member {
+	padding: 0.625rem;
+	margin-bottom: 1rem;
+
+	@include border-radius(0.5rem);
+
+	.member-avatar {
+		@include border-radius(0.5rem);
+	}
+
+	.member-name {
+		font-size: 1.3125rem;
+		margin-bottom: 1rem;
+	}
+
+	.member-role {
+		color: $theme-color;
+		font-size: 0.75rem;
+	}
+
+	.member-intro {
+		margin-top: 1.5rem;
+
+		.read-more {
+			color: $theme-color;
+			font-size: 1rem;
+			font-weight: 600;
+
+			&::after {
+				content: escape-svg($external-link-icon);
+				position: relative;
+				top: 3px;
+				margin-left: 0.625rem;
+			}
+		}
+	}
+
+	.member-actions {
+		margin-top: 1.875rem;
+
+		.follow-me {
+			span {
+				margin-right: 1.125rem;
+			}
+		}
+	}
+
+	.member-details {
+		padding: 3rem;
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Single Member Page
+-----------------------------------------------------------------*/
+
+#single-member-page {
+	.team-member {
+		padding: 0;
+
+		.member-details {
+			padding: 0 3rem 3rem 3rem;
+		}
+	}
+
+	#member-services {
+		.member-service {
+			padding-left: 2.25rem;
+			position: relative;
+
+			&::before {
+				content: "";
+				background-image: escape-svg($checker-icon);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				display: block;
+				width: 1rem;
+				height: 0.8125rem;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			h3 {
+				font-family: $body-font;
+				font-size: 1rem;
+				margin-bottom: 1.375rem;
+			}
+		}
+	}
+
+	#member-portfolios {
+		.member-portfolio {
+			margin-bottom: 1.875rem;
+
+			img {
+				margin-bottom: 1.5rem;
+
+				@include border-radius(0.5rem);
+			}
+
+			h3 {
+				font-family: $body-font;
+				font-size: 1rem;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Blog Page
+-----------------------------------------------------------------*/
+
+#blog-page {
+	#posts {
+		height: auto;
+
+		.post {
+			padding: 0.625rem 0;
+
+			.post-thumbnail {
+				@include border-radius(0.5rem);
+			}
+
+			.post-content {
+				display: block;
+				padding: 0.9375rem 0;
+				position: initial;
+
+				.entry-title {
+					h4 {
+						font-family: $body-font;
+						font-size: 1.1875rem;
+						line-height: 1.875rem;
+
+						a {
+							color: $headings-color;
+
+							&:hover {
+								color: $theme-color;
+							}
+						}
+					}
+				}
+
+				.entry-meta {
+					font-family: $body-font;
+					font-size: 0.875rem;
+					width: 100%;
+					margin-right: 0;
+					padding-top: 0;
+					position: initial;
+
+					a {
+						color: $headings-color;
+					}
+				}
+
+				.entry-link {
+					color: $theme-color;
+					font-size: 0.875rem;
+				}
+
+				.entry-categories {
+					font-size: 0.875rem;
+				}
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Shope Page
+-----------------------------------------------------------------*/
+
+#shop-page {
+	.sidebar {
+		.widget {
+			&.featured-products {
+				.product {
+					.product-image {
+						@include border-radius(0.5rem);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Single Product Page
+-----------------------------------------------------------------*/
+
+#single-product-page {
+	.page-content {
+		padding-top: 6rem;
+	}
+
+	.product-thumbnail {
+		position: relative;
+
+		.product-gallery {
+			position: absolute;
+			left: 0;
+			top: 1.25rem;
+			z-index: 1;
+
+			li {
+				border-left: 5px solid transparent;
+				margin-bottom: 0.625rem;
+				padding-left: 0.75rem;
+
+				> a {
+					background-color: $white;
+					display: flex;
+					align-items: center;
+					width: 5.625rem;
+					height: 5.625rem;
+					overflow: hidden;
+				}
+
+				&:hover,
+				&.active {
+					border-color: $theme-color;
+				}
+			}
+		}
+	}
+
+	.product.single-product {
+		.onsale {
+			top: 0;
+			right: 1.875rem;
+			bottom: initial;
+		}
+
+		.product-details {
+			padding: 0;
+
+			@include media-breakpoint-down(lg) {
+				padding-top: 2.25rem;
+			}
+		}
+
+		.product-title {
+			color: $body-color;
+			font-size: 2.5rem;
+			font-weight: 700;
+		}
+
+		.product-price {
+			color: $headings-color;
+			margin-top: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.product-meta {
+			span {
+				display: block;
+
+				a {
+					color: $headings-color;
+					font-weight: 600;
+				}
+			}
+		}
+
+		form.cart {
+			display: flex;
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+
+			input[type=submit] {
+				color: $white;
+				height: 3rem;
+				line-height: 3rem;
+				padding: 0 $btn-padding-x;
+			}
+		}
+	}
+
+	.product-more-info {
+		.tab-content {
+			margin-top: 1.5rem;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Cart Page
+-----------------------------------------------------------------*/
+
+#cart-page {
+	.cart-form {
+		.shop-table {
+			tfoot {
+				td {
+					padding: 1.25rem 0;
+					border-bottom: none;
+				}
+			}
+
+			.cart-item {
+				.product-thumbnail {
+					width: 8.25rem;
+
+					img {
+						width: 6.25rem;
+						height: auto;
+						min-width: 6.25rem;
+					}
+				}
+
+				.product-name {
+					a {
+						color: $headings-color;
+						font-size: 1rem;
+						font-weight: 600;
+
+						&.product-wishlist,
+						&.product-delete {
+							color: $theme-color;
+							font-size: 0.8125rem;
+							margin-right: 1.25rem;
+						}
+					}
+				}
+
+				.product-subtotal {
+					color: $headings-color;
+					font-size: 1.25rem;
+					font-weight: 600;
+				}
+			}
+
+			.actions {
+				.form-control,
+				.btn {
+					@include media-breakpoint-down(md) {
+						width: 100%;
+						margin-bottom: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	.cart-totals {
+		@include media-breakpoint-up(lg) {
+			padding: 0 2.375rem;
+		}
+
+		.shop-table {
+			font-size: 0.75rem;
+
+			td, th {
+				border-bottom-width: 1px;
+				border-color: $light;
+				color: $headings-color;
+				padding: 1rem 0;
+				vertical-align: middle;
+			}
+
+			th {
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+
+			td {
+				text-align: right;
+			}
+
+			.order-total {
+				td {
+					font-size: 1.25rem;
+					font-weight: 600;
+				}
+			}
+
+			.shipping {
+				td {
+					text-align: left;
+
+					p {
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+		.btn {
+			@include media-breakpoint-down(md) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Checkout Page
+-----------------------------------------------------------------*/
+
+#checkout-page {
+	.checkout {
+		padding: 2.5rem 0;
+	}
+
+	.order-details {
+		color: $headings-color;
+		font-size: 0.75rem;
+		padding: 2.5rem 0;
+
+		.shop-table {
+			td, th {
+				border-color: $light;
+				border-bottom-width: 1px;
+				color: $headings-color;
+				padding: 1rem 0;
+				vertical-align: middle;
+			}
+
+			.product-total {
+				text-align: right;
+			}
+
+			thead {
+				th {
+					font-weight: 600;
+					text-transform: uppercase;
+				}
+			}
+
+			tfoot {
+				.cart-subtotal,
+				.order-total {
+					th {
+						font-weight: 600;
+						text-transform: uppercase;
+					}
+
+					td {
+						text-align: right;
+					}
+				}
+
+				.order-total {
+					td {
+						font-size: 1.25rem;
+						font-weight: 600;
+					}
+				}
+			}
+
+			.shipping {
+				td {
+					text-align: left;
+
+					p {
+						font-weight: 600;
+					}
+				}
+
+				.shipping-destination {
+					input {
+						background-color: $light;
+					}
+				}
+			}
+		}
+
+		.checkout-payment {
+			p {
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Wishlist Page
+-----------------------------------------------------------------*/
+
+#wishlist-page {
+	.shop-table {
+		.wishlist-item {
+			.product-thumbnail {
+				width: 8.25rem;
+
+				img {
+					width: 6.25rem;
+					height: auto;
+					min-width: 6.25rem;
+				}
+			}
+
+			.product-name {
+				a {
+					color: $headings-color;
+					font-size: 1rem;
+					font-weight: 600;
+
+					&.product-delete {
+						color: $theme-color;
+						font-size: 0.8125rem;
+						margin-right: 1.25rem;
+					}
+				}
+			}
+
+			.product-actions {
+				.btn {
+					@include media-breakpoint-down(lg) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

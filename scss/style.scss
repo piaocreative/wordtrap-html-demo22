@@ -1,10 +1,10 @@
 /*-----------------------------------------------------------------------------------
 
-    Theme Name: Saler
-    Theme URI: 
+    Theme Name: Wordtrap
+    Theme URI:
     Description: The Multi-Purpose Ecommerce Template
     Author: John Piao
-    Author URI: 
+    Author URI:
     Version: 1.0
 
     SASS Stylesheet
@@ -17,87 +17,45 @@
 
 
 // Bootstrap
-@import "scss/bootstrap/bootstrap";
-
-html {
-    scroll-behavior: smooth;
-    font-size: 100%;
-
-    /*--------------------------------------------------------------
-    ## Netbook
-    --------------------------------------------------------------*/
-    @include media-breakpoint-down(xl) {
-        font-size: 90%;
-    }
-
-    /*--------------------------------------------------------------
-    ## Tablet
-    --------------------------------------------------------------*/
-    @include media-breakpoint-down(lg) {
-        font-size: 85%;
-    }
-  
-    /*--------------------------------------------------------------
-    ## Mobile
-    --------------------------------------------------------------*/
-    @include media-breakpoint-down(md) {
-        font-size: 80%;
-    }
-    
-    /*--------------------------------------------------------------
-    ## Mini
-    --------------------------------------------------------------*/
-    @include media-breakpoint-down(sm) {
-        font-size: 75%;
-    }
-}
+@import "bootstrap/bootstrap";
 
 
 // Core CSS
-// @import "demo/typography";
+@import "demo/typography";
 
 
-#demo22 {
-   // Content Blocks
-   @import "demo/topbar";
-   @import "demo/header";
-   @import "demo/banner";
-   @import "demo/blog";
-   @import "demo/shop";
-   @import "demo/contact";
-   @import "demo/404";
+// Content Blocks
+@import "demo/header";
+@import "demo/banner";
+@import "demo/blog";
+@import "demo/shop";
 
 
-   // Footer
-   @import "demo/footer";
+// Footer
+@import "demo/footer";
 
 
-   // Page Title
-   @import "demo/pagetitle";
+// Page Title
+@import "demo/page";
 
 
-   // Form
-   @import "demo/form";
+// Form
+@import "demo/form";
 
 
-   // Widgets
-   @import "demo/widgets";
+// Widgets
+@import "demo/widgets";
 
 
-   // Utilities
-   @import "demo/utilities";
+// Utilities
+@import "demo/utilities";
 
 
-   // Shortcodes
-   @import "demo/shortcodes/feature-box";
-   @import "demo/shortcodes/headings";
-   @import "demo/shortcodes/logos";
-   @import "demo/shortcodes/icon-box";
-   @import "demo/shortcodes/timeline";
+// Shortcodes
+@import "demo/shortcodes/headings";
+@import "demo/shortcodes/logos";
+@import "demo/shortcodes/socials";
 
 
-   // Extras
-   @import "demo/extras";
-
-
-}
+// Extras
+@import "demo/extras";

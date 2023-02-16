@@ -19,28 +19,17 @@
 .widget {
 	position: relative;
 
-	p {
-		font-family: 'Open Sans';
-		font-weight: 400;
-	}
-
-	a {
-		font-family: 'Open Sans';
-		font-weight: 400;
-	}
-
 	.widget-title {
-		font-family: 'Open Sans';
-		color: #61605f;
-		display: block;
-		text-decoration: none;
+		color: $gray-300;
+		font-family: $body-font;
 		font-size: .875rem;
 		font-weight: 500;
-	}	
+		margin-bottom: 0.625rem;
+	}
 
 	// Widget - Social
 	&.widget-social {
-		.social-icons {			
+		.social-icons {
 			list-style: none;
 
 			li {
@@ -53,7 +42,7 @@
 				&:last-child {
 					padding-right: 0;
 				}
-		
+
 				a {
 					background-color: #282828;
 					color:  $white;
@@ -66,14 +55,14 @@
 					text-align: center;
 					border-radius: 50%;
 
-					@include border-radius(50%);					
-					@include transition(all 0.3s ease-in-out);					
-		
+					@include border-radius(50%);
+					@include transition(all 0.3s ease-in-out);
+
 					&:hover {
 						background-color: $theme-color;
 						color: $white;
 					}
-		
+
 					i {
 						vertical-align: top;
 						line-height: 1.8125rem;
@@ -108,7 +97,7 @@
 	// Widget - Payments
 	&.widget-payment {
 		p {
-			color: #61605f;
+			color: $gray-300;
 			display: block;
 			text-decoration: none;
 			font-size: 0.675rem;
@@ -153,7 +142,7 @@
 
 		.widget-content {
 			p, a {
-				color: #61605f;
+				color: $gray-300;
 				display: block;
 				text-decoration: none;
 				font-size: 0.875rem;
@@ -166,26 +155,6 @@
 
 				&.heading-font {
 					letter-spacing: 0.1rem
-				}
-			}
-		}
-	}
-
-	// Widget - feedback
-	&.widget-feedback {
-		.widget-content {
-			p {
-				letter-spacing: 0.1rem
-			}
-
-			#widget-feedback-form {
-				input {
-					background-color: #f9f9f9;
-					color:#d0d0d0;
-				}
-				
-				.input-group-append {
-					margin-left: -2.875rem;
 				}
 			}
 		}
@@ -207,17 +176,78 @@
 
 				.product-details {
 					flex: 1;
-					padding: 0 1.25rem;					
+					padding: 0 1.25rem;
 				}
 
-				.product-price {					
+				.product-price {
 					margin-bottom: 0.625rem;
 				}
 
 				.product-title {
 					a {
-						color: $white;																		
-					}					
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+
+	// Widget - Latest Posts
+	&.widget-latest-posts {
+		.widget-content {
+			.post {
+				padding: 0;
+				margin-bottom: 1rem;
+			}
+
+			.entry-title {
+				h4 {
+					font-family: $body-font;
+					font-size: 1.1875rem;
+					line-height: 1.875rem;
+
+					a {
+						color: $headings-color;
+
+						&:hover {
+							color: $theme-color;
+						}
+					}
+				}
+			}
+
+			.post-thumbnail {
+				height: auto;
+			}
+		}
+	}
+
+	// Widget - Latest Comments
+	&.widget-latest-comments {
+		.comment-author {
+			color: $headings-color;
+			font-weight: 600;
+
+			&:hover {
+				color: $theme-color;
+			}
+		}
+	}
+
+	// Widget - Search
+	&.widget-search {
+		.search-form {
+			.input-group {
+				.form-control {
+					border-radius: 1.375rem;
+				}
+
+				.btn {
+					position: absolute;
+					right: 1.5rem;
+					padding-left: 0;
+					padding-right: 0;
+					z-index: 4;
 				}
 			}
 		}

@@ -1,0 +1,35 @@
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: socials.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Social Icons
+-----------------------------------------------------------------*/
+
+
+.social-icons {
+	display: inline-block;
+
+	li {
+
+		a {
+			background-color: $headings-color;
+			color: $white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 2.25rem;
+			height: 2.25rem;
+
+			@include border-radius(0.5rem);
+			@include transition(all 0.3s ease-in-out);
+
+			&:hover {
+				background-color: $theme-color;
+			}
+		}
+	}
+}

@@ -16,56 +16,22 @@
 -----------------------------------------------------------------*/
 
 
-
 #header {
-	position: relative;	
+	background-color: $white;
+	position: relative;
 
 	// Transparent header
 	&.transparent-header {
-		background-color: $white;
+		background-color: transparent;
 		z-index: 199;
 
-		@include media-breakpoint-up(lg) {
-			background-color: transparent;
-
-			& + #content,
-			& + #contact-info,
-			& + #error-404 {
-				position: relative;
-				top: -$header-height;
-				margin-bottom: -$header-height;
-			}
-		}			
+		& + #content {
+			position: relative;
+			top: -$header-height;
+			margin-bottom: -$header-height;
+		}
 	}
 }
-
-.navbar {
-	padding-top: 2.5rem;
-	padding-bottom: 2.5rem;
-}
-
-.nav {
-	flex-wrap: nowrap;
-}
-
-.navbar-toggler {
-	border-radius: 0;
-	border: 0;
-	padding: 0;
-}
-
-.navbar-collapse {
-	padding: 1rem 0;
-
-	@include media-breakpoint-up(lg) {
-		padding: 0;
-	}
-}
-
-
-/* ----------------------------------------------------------------
-	Sticky Header
------------------------------------------------------------------*/
 
 
 /* ----------------------------------------------------------------
@@ -73,11 +39,62 @@
 -----------------------------------------------------------------*/
 
 .navbar-brand {
-	margin-right: 2.25rem;
+	margin-right: 4.375rem;
 
 	img {
-		max-width: 6.5rem;
-		height: auto;
+		max-width: 9.375rem;
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Navbar toggler
+-----------------------------------------------------------------*/
+
+.navbar-toggler {
+	border-radius: 0;
+	z-index: 200;
+
+	&:focus {
+		@include box-shadow(none);
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.navbar-light .navbar-toggler {
+		&[aria-expanded=true] {
+			.navbar-toggler-icon {
+				background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$white}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>"));
+			}
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+	Navbar
+-----------------------------------------------------------------*/
+
+.navbar {
+	&.navbar-dark {
+		.nav-link {
+			color: $white;
+
+			&:hover,
+			&:focus {
+				color: $theme-color;
+			}
+		}
+	}
+
+	&.navbar-light {
+		.nav-link {
+			color: $dark;
+
+			&:hover,
+			&:focus {
+				color: $theme-color;
+			}
+		}
 	}
 }
 
@@ -86,24 +103,110 @@
 	Primary Menu
 -----------------------------------------------------------------*/
 
-#primary-menu {
-	.nav-link {
-		color: $primary-menu-font-color;
+#navbarCollapse {
+	background-color: rgba($black, 0.8);
+	position: initial;
+    box-shadow: none;
+    width: 100%;
+	padding: 2.25rem 0;
+
+	@include media-breakpoint-up(lg) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		padding: 11.625rem 0 0 0;
+		z-index: 199;
+		opacity: 1;
 		display: block;
-		font-family: $primary-menu-font;
-		font-weight: $primary-menu-font-weight;
-		font-size: $primary-menu-font-size;
-		letter-spacing: $primary-menu-font-spacing;
-		text-transform: $primary-menu-font-tt;	
-		padding: 0.5rem 1rem;	
+
+		@include transition(all .35s ease);
+
+		&.collapse {
+			&:not(.show) {
+				display: none;
+			}
+		}
+
+		&.collapsing {
+			opacity: 0;
+		}
+	}
+}
+
+#primary-menu {
+	text-align: center;
+
+	.nav-link {
+		color: $white;
+		font-family: $headings-font-family;
+		font-size: 1.875rem;
+		font-weight: 400;
+		line-height: 1;
+		padding: 1.125rem;
+
+		@include transition(all 0.3s ease-in-out);
 	}
 
 	.nav-item {
-		@include transition(all 0.3s ease-in-out);
+		&.current {
+			& > .nav-link {
+				color: $theme-color;
+			}
+		}
 
-		&.current,
-		&:hover {
-			background-color: $theme-color;			
+		& > .dropdown-menu {
+			background-color: transparent;
+			border: none;
+			border-radius: 0;
+			box-shadow: none;
+			text-align: center;
+
+			&[data-bs-popper] {
+				margin-top: 0;
+			}
+
+			@include media-breakpoint-up(lg) {
+				position: relative;
+				display: block;
+				top: -1000px;
+				opacity: 0;
+				height: 0;
+
+				@include transition(transform .5s ease-out);
+				@include translate3d(0, -20px, 0);
+			}
+
+			.nav-item {
+				& > .nav-link {
+					border: none;
+					font-family: $body-font;
+					font-size: 0.875rem;
+					font-weight: 100;
+					padding: 1rem 0;
+				}
+
+				&.current,
+				&:hover {
+					& > .nav-link {
+						color: $theme-color;
+					}
+				}
+			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			&.current,
+			&:hover {
+				.dropdown-menu {
+					top: auto;
+					opacity: 1;
+					height: auto;
+
+					@include translate3d(0, 0, 0);
+				}
+			}
 		}
 	}
 }
@@ -113,27 +216,25 @@
 	Top Buttons
 -----------------------------------------------------------------*/
 
-
 #top-btns {
-	.nav-item:not(:first-child) {
-		margin-left: 1.25rem;
-	}
-
 	.nav-link {
-		color: $top-btn-font-color;	
-		font-size: $top-btn-font-size;	
 		line-height: 1;
-		padding: 0;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+
+		@include media-breakpoint-down(lg) {
+			color: $white;
+		}
 
 		&:hover {
-			color: $link-hover-color;
+			color: $theme-color;
 		}
 
 		[data-cart-items] {
 			position: relative;
 			display: inline-block;
 		}
-		
+
 		[data-cart-items]::before {
 			content: attr(data-cart-items);
 			position: absolute;
@@ -148,7 +249,7 @@
 			font-weight: 500;
 			border-radius: 50%;
 			border: 1px solid  $white;
-			background-color: #ff6f61;
+			background-color: $theme-color;
 			color:  $white;
 		}
 	}
@@ -160,23 +261,17 @@
 -----------------------------------------------------------------*/
 
 #top-links {
-	.nav-item {			
-		@include media-breakpoint-up(lg) {
-			padding-right: 1.875rem;		
-		}
-	}
+	.nav-link {
+		font-size: 0.75rem;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
 
-	a.nav-link {
-		color: $top-btn-font-color;
-		display: block;
-		font-size: 0.75rem;	
-		
-		@include media-breakpoint-up(lg) {
-			padding: 0;		
+		@include media-breakpoint-down(lg) {
+			color: $white;
 		}
 
 		&:hover {
-			color: $topbar-hover-color;
+			color: $theme-color;
 		}
 	}
 
@@ -189,9 +284,9 @@
 	.dropdown-menu {
 		background: $white;
 		border: 0;
-		top: 1.5rem;
+		top: 2.875rem;
 		left: 0;
-		width: 100%;		
+		width: 100%;
 		margin: 0;
 		border-top: 3px solid $theme-color;
 
@@ -203,10 +298,10 @@
 		}
 
 		a.dropdown-item {
-			color: $heading-color;
+			color: $headings-color;
 			height: 2.25rem;
 			line-height: 2.25rem;
-			font-size: 0.75rem;				
+			font-size: 0.75rem;
 			padding: 0 0.75rem;
 
 			&:hover {
@@ -224,34 +319,3 @@
 		}
 	}
 }
-
-
-/* ----------------------------------------------------------------
-	Top Infos
------------------------------------------------------------------*/
-
-
-
-/* ----------------------------------------------------------------
-	Top Login
------------------------------------------------------------------*/
-
-
-
-/* ----------------------------------------------------------------
-	Top Search
------------------------------------------------------------------*/
-
-
-
-
-/* ----------------------------------------------------------------
-	Top Cart
------------------------------------------------------------------*/
-
-
-
-
-/* ----------------------------------------------------------------
-	Top Account
------------------------------------------------------------------*/

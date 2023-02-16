@@ -13,20 +13,15 @@
 /* Heading Block - with Subtitle
 -----------------------------------------------------------------*/
 
-.heading-block { 
-	margin-bottom: 3.25rem; 
+.heading-block {
+	margin-bottom: 3.25rem;
 	position: relative;
 
-	@include media-breakpoint-down(sm) {
-		margin: 2rem !important;
-	}
-
-	.title {		
+	.title {
+		color: $headings-color;
 		display: block;
-		font-family: $heading-font;
-		line-height: 1;
-		margin-bottom: 0;
+		font-family: $headings-font-family;
 		font-size: 2.5rem;
-		color: $heading-color;
-	}	
+		margin-bottom: 0;
+	}
 }
